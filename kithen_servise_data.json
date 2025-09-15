@@ -22,16 +22,30 @@
   {
     "model": "kitchen.cook", "pk": 1,
     "fields": {
-      "username": "gordon.ramsay",
-      "password": "pbkdf2_sha256$320000$1",
-      "email": "gordon@kitchen.com",
-      "first_name": "Gordon",
-      "last_name": "Ramsay",
+      "password": "pbkdf2_sha256$320000$6uM28XWOFX6ewyloJzjqmt$L+ZhofPylneoaL2iZS4sZu4ZMUNb4oIevfAdzOMn/eE=",
+      "is_superuser": true,
+      "username": "admin.cook",
+      "first_name": "Admin",
+      "last_name": "Cook",
+      "email": "admin.user@cook.com",
+      "is_staff": true,
+      "is_active": true,
       "years_of_experience": 25
     }
   },
   {
     "model": "kitchen.cook", "pk": 2,
+    "fields": {
+      "username": "gordon.ramsay",
+      "password": "pbkdf2_sha256$320000$1",
+      "email": "gordon@kitchen.com",
+      "first_name": "Gordon",
+      "last_name": "Ramsay",
+      "years_of_experience": 20
+    }
+  },
+  {
+    "model": "kitchen.cook", "pk": 3,
     "fields": {
       "username": "jamie.oliver",
       "password": "pbkdf2_sha256$320000$2",
@@ -42,7 +56,7 @@
     }
   },
   {
-    "model": "kitchen.cook", "pk": 3,
+    "model": "kitchen.cook", "pk": 4,
     "fields": {
       "username": "nadiya.hussain",
       "password": "pbkdf2_sha256$320000$3",
@@ -53,7 +67,7 @@
     }
   },
   {
-    "model": "kitchen.cook", "pk": 4,
+    "model": "kitchen.cook", "pk": 5,
     "fields": {
       "username": "massimo.bottura",
       "password": "pbkdf2_sha256$320000$4",
@@ -64,7 +78,7 @@
     }
   },
   {
-    "model": "kitchen.cook", "pk": 5,
+    "model": "kitchen.cook", "pk": 6,
     "fields": {
       "username": "elena.arzak",
       "password": "pbkdf2_sha256$320000$5",
@@ -75,7 +89,7 @@
     }
   },
   {
-    "model": "kitchen.cook", "pk": 6,
+    "model": "kitchen.cook", "pk": 7,
     "fields": {
       "username": "anthony.bourdain",
       "password": "pbkdf2_sha256$320000$6",
@@ -86,7 +100,7 @@
     }
   },
   {
-    "model": "kitchen.cook", "pk": 7,
+    "model": "kitchen.cook", "pk": 8,
     "fields": {
       "username": "yotam.ottolenghi",
       "password": "pbkdf2_sha256$320000$7",
