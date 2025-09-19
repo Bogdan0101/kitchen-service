@@ -9,6 +9,9 @@ class Cook(AbstractUser):
     def __str__(self) -> str:
         return f"{self.username}, {self.years_of_experience} ({self.first_name} {self.last_name})"
 
+    def get_absolute_url(self):
+        return reverse("kitchen:cook-detail", kwargs={"pk": self.pk})
+
 
 class DishType(models.Model):
     name = models.CharField(max_length=100, unique=True)
