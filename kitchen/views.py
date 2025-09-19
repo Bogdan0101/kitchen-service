@@ -6,7 +6,15 @@ from django.contrib.auth.decorators import login_required
 from django.urls import reverse_lazy
 from django.views import generic
 
-from .forms import CookCreationForm, CookUpdateYearsForm, DishForm, DishTypeForm, IngredientForm
+from .forms import (CookCreationForm,
+                    CookUpdateYearsForm,
+                    DishForm,
+                    DishTypeForm,
+                    IngredientForm,
+                    CookSearchForm,
+                    IngredientSearchForm,
+                    DishSearchForm,
+                    DishTypeSearchForm, )
 from .models import Cook, Dish, DishType, Ingredient
 
 
@@ -36,6 +44,23 @@ class CookListView(LoginRequiredMixin, generic.ListView):
     template_name = "kitchen/cook_list.html"
     paginate_by = 5
 
+    def get_context_data(
+            self, *, object_list=None, **kwargs
+    ):
+        context = super(CookListView, self).get_context_data(**kwargs)
+        username = self.request.GET.get("username")
+        context["search_form"] = CookSearchForm(
+            initial={"username": username}
+        )
+        return context
+
+    def get_queryset(self):
+        form = CookSearchForm(self.request.GET)
+        if form.is_valid():
+            return (Cook.objects.
+                    filter(username__icontains=form.cleaned_data["username"]))
+        return Cook.objects.all()
+
 
 class CookDetailView(LoginRequiredMixin, generic.DetailView):
     model = get_user_model()
@@ -64,6 +89,23 @@ class DishListView(LoginRequiredMixin, generic.ListView):
     paginate_by = 5
     context_object_name = "dish_list"
     template_name = "kitchen/dish_list.html"
+
+    def get_context_data(
+            self, *, object_list=None, **kwargs
+    ):
+        context = super(DishListView, self).get_context_data(**kwargs)
+        name = self.request.GET.get("model")
+        context["search_form"] = DishSearchForm(
+            initial={"name": name}
+        )
+        return context
+
+    def get_queryset(self):
+        form = DishSearchForm(self.request.GET)
+        if form.is_valid():
+            return (Dish.objects.
+                    filter(name__icontains=form.cleaned_data["name"]))
+        return Dish.objects.all()
 
 
 class DishDetailView(LoginRequiredMixin, generic.DetailView):
@@ -108,6 +150,23 @@ class DishTypeListView(LoginRequiredMixin, generic.ListView):
     template_name = "kitchen/dish_type_list.html"
     queryset = DishType.objects.all().prefetch_related("dishes")
 
+    def get_context_data(
+            self, *, object_list=None, **kwargs
+    ):
+        context = super(DishTypeListView, self).get_context_data(**kwargs)
+        name = self.request.GET.get("name")
+        context["search_form"] = DishTypeSearchForm(
+            initial={"name": name}
+        )
+        return context
+
+    def get_queryset(self):
+        form = DishTypeSearchForm(self.request.GET)
+        if form.is_valid():
+            return (DishType.objects
+                    .filter(name__icontains=form.cleaned_data["name"]))
+        return DishType.objects.all()
+
 
 class DishTypeDetailView(LoginRequiredMixin, generic.DetailView):
     model = DishType
@@ -140,6 +199,23 @@ class IngredientListView(LoginRequiredMixin, generic.ListView):
     context_object_name = "ingredient_list"
     template_name = "kitchen/ingredient_list.html"
     queryset = Ingredient.objects.all().prefetch_related("dishes")
+
+    def get_context_data(
+            self, *, object_list=None, **kwargs
+    ):
+        context = super(IngredientListView, self).get_context_data(**kwargs)
+        name = self.request.GET.get("name")
+        context["search_form"] = IngredientSearchForm(
+            initial={"name": name}
+        )
+        return context
+
+    def get_queryset(self):
+        form = IngredientSearchForm(self.request.GET)
+        if form.is_valid():
+            return (Ingredient.objects
+                    .filter(name__icontains=form.cleaned_data["name"]))
+        return Ingredient.objects.all()
 
 
 class IngredientDetailView(LoginRequiredMixin, generic.DetailView):
