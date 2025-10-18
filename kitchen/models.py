@@ -7,7 +7,9 @@ class Cook(AbstractUser):
     years_of_experience = models.IntegerField(default=0)
 
     def __str__(self) -> str:
-        return f"{self.username}, {self.years_of_experience} ({self.first_name} {self.last_name})"
+        return (f"{self.username}, "
+                f"{self.years_of_experience} "
+                f"({self.first_name} {self.last_name})")
 
     def get_absolute_url(self):
         return reverse("kitchen:cook-detail", kwargs={"pk": self.pk})
@@ -31,7 +33,9 @@ class Dish(models.Model):
     name = models.CharField(max_length=100, unique=True)
     description = models.TextField()
     price = models.DecimalField(decimal_places=2, max_digits=10)
-    dish_type = models.ForeignKey(DishType, on_delete=models.CASCADE, related_name="dishes")
+    dish_type = models.ForeignKey(DishType,
+                                  on_delete=models.CASCADE,
+                                  related_name="dishes")
     cooks = models.ManyToManyField(Cook, related_name="dishes")
     ingredients = models.ManyToManyField(Ingredient, related_name="dishes")
 
