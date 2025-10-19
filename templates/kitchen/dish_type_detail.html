@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="box-detail">
+    <h1>
+      Dish type: {{ dishtype.name }}
+    </h1>
+    <h1>Dishes:</h1>
+    <div class="box-detail-info">
+      <ul>
+        {% for dish in dishtype.dishes.all %}
+          <li>{{ dish.name }}</li>
+        {% empty %}
+          No dishes!
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endblock %}

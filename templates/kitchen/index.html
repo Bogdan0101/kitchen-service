@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="body-index">
+    <div class="body-index-visits">
+      <h2>You have visited our service {{ count_visits }} time{{ count_visits|pluralize }}.</h2>
+    </div>
+    <div class="body-index-content">
+      <div>
+        <h2>{{ count_cook }}</h2>
+        <p>The number of our professional chefs.</p>
+      </div>
+      <div>
+        <h2>{{ count_dish }}</h2>
+        <p>The number of our first-class dishes.</p>
+      </div>
+      <div>
+        <h2>{{ count_dish_type }}</h2>
+        <p>Number of types of dishes.</p>
+      </div>
+      <div>
+        <h2>{{ count_ingredient }}</h2>
+        <p>The amount of our ingredients for cooking dishes.</p>
+      </div>
+    </div>
+  </div>
+{% endblock %}

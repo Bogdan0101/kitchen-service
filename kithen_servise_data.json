@@ -1,0 +1,268 @@
+[
+  { "model": "kitchen.dishtype", "pk": 1, "fields": { "name": "Biscuits" } },
+  { "model": "kitchen.dishtype", "pk": 2, "fields": { "name": "Braai" } },
+  { "model": "kitchen.dishtype", "pk": 3, "fields": { "name": "Bread" } },
+  { "model": "kitchen.dishtype", "pk": 4, "fields": { "name": "Cakes" } },
+  { "model": "kitchen.dishtype", "pk": 5, "fields": { "name": "Curries" } },
+  { "model": "kitchen.dishtype", "pk": 6, "fields": { "name": "Desserts" } },
+  { "model": "kitchen.dishtype", "pk": 7, "fields": { "name": "Pasta" } },
+  { "model": "kitchen.dishtype", "pk": 8, "fields": { "name": "Pizza" } },
+
+  { "model": "kitchen.ingredient", "pk": 1, "fields": { "name": "Tomato" } },
+  { "model": "kitchen.ingredient", "pk": 2, "fields": { "name": "Cheese" } },
+  { "model": "kitchen.ingredient", "pk": 3, "fields": { "name": "Flour" } },
+  { "model": "kitchen.ingredient", "pk": 4, "fields": { "name": "Milk" } },
+  { "model": "kitchen.ingredient", "pk": 5, "fields": { "name": "Eggs" } },
+  { "model": "kitchen.ingredient", "pk": 6, "fields": { "name": "Bacon" } },
+  { "model": "kitchen.ingredient", "pk": 7, "fields": { "name": "Butter" } },
+  { "model": "kitchen.ingredient", "pk": 8, "fields": { "name": "Mushrooms" } },
+  { "model": "kitchen.ingredient", "pk": 9, "fields": { "name": "Chicken" } },
+  { "model": "kitchen.ingredient", "pk": 10, "fields": { "name": "Potatoes" } },
+
+  {
+    "model": "kitchen.cook", "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$6uM28XWOFX6ewyloJzjqmt$L+ZhofPylneoaL2iZS4sZu4ZMUNb4oIevfAdzOMn/eE=",
+      "is_superuser": true,
+      "username": "admin.cook",
+      "first_name": "Admin",
+      "last_name": "Cook",
+      "email": "admin.user@cook.com",
+      "is_staff": true,
+      "is_active": true,
+      "years_of_experience": 25
+    }
+  },
+  {
+    "model": "kitchen.cook", "pk": 2,
+    "fields": {
+      "username": "gordon.ramsay",
+      "password": "pbkdf2_sha256$320000$1",
+      "email": "gordon@kitchen.com",
+      "first_name": "Gordon",
+      "last_name": "Ramsay",
+      "years_of_experience": 20
+    }
+  },
+  {
+    "model": "kitchen.cook", "pk": 3,
+    "fields": {
+      "username": "jamie.oliver",
+      "password": "pbkdf2_sha256$320000$2",
+      "email": "jamie@kitchen.com",
+      "first_name": "Jamie",
+      "last_name": "Oliver",
+      "years_of_experience": 18
+    }
+  },
+  {
+    "model": "kitchen.cook", "pk": 4,
+    "fields": {
+      "username": "nadiya.hussain",
+      "password": "pbkdf2_sha256$320000$3",
+      "email": "nadiya@kitchen.com",
+      "first_name": "Nadiya",
+      "last_name": "Hussain",
+      "years_of_experience": 12
+    }
+  },
+  {
+    "model": "kitchen.cook", "pk": 5,
+    "fields": {
+      "username": "massimo.bottura",
+      "password": "pbkdf2_sha256$320000$4",
+      "email": "massimo@kitchen.com",
+      "first_name": "Massimo",
+      "last_name": "Bottura",
+      "years_of_experience": 30
+    }
+  },
+  {
+    "model": "kitchen.cook", "pk": 6,
+    "fields": {
+      "username": "elena.arzak",
+      "password": "pbkdf2_sha256$320000$5",
+      "email": "elena@kitchen.com",
+      "first_name": "Elena",
+      "last_name": "Arzak",
+      "years_of_experience": 20
+    }
+  },
+  {
+    "model": "kitchen.cook", "pk": 7,
+    "fields": {
+      "username": "anthony.bourdain",
+      "password": "pbkdf2_sha256$320000$6",
+      "email": "anthony@kitchen.com",
+      "first_name": "Anthony",
+      "last_name": "Bourdain",
+      "years_of_experience": 22
+    }
+  },
+  {
+    "model": "kitchen.cook", "pk": 8,
+    "fields": {
+      "username": "yotam.ottolenghi",
+      "password": "pbkdf2_sha256$320000$7",
+      "email": "yotam@kitchen.com",
+      "first_name": "Yotam",
+      "last_name": "Ottolenghi",
+      "years_of_experience": 15
+    }
+  },
+
+  {
+    "model": "kitchen.dish", "pk": 1,
+    "fields": {
+      "name": "Napoleon",
+      "description": "Layered cake with custard",
+      "price": "7.50",
+      "dish_type": 4,
+      "cooks": [1, 3],
+      "ingredients": [3, 4, 5]
+    }
+  },
+  {
+    "model": "kitchen.dish", "pk": 2,
+    "fields": {
+      "name": "Varenyky",
+      "description": "Dumplings with potato filling",
+      "price": "6.00",
+      "dish_type": 5,
+      "cooks": [2, 5],
+      "ingredients": [3, 5, 10]
+    }
+  },
+  {
+    "model": "kitchen.dish", "pk": 3,
+    "fields": {
+      "name": "Tomato soup",
+      "description": "Creamy tomato soup",
+      "price": "5.50",
+      "dish_type": 5,
+      "cooks": [1, 6],
+      "ingredients": [1, 4, 7]
+    }
+  },
+  {
+    "model": "kitchen.dish", "pk": 4,
+    "fields": {
+      "name": "Karbonara",
+      "description": "Pasta with bacon and cheese",
+      "price": "8.90",
+      "dish_type": 7,
+      "cooks": [4, 7],
+      "ingredients": [2, 3, 6, 5]
+    }
+  },
+  {
+    "model": "kitchen.dish", "pk": 5,
+    "fields": {
+      "name": "Margarita Pizza",
+      "description": "Classic cheese and tomato pizza",
+      "price": "9.00",
+      "dish_type": 8,
+      "cooks": [3, 5],
+      "ingredients": [1, 2, 3]
+    }
+  },
+  {
+    "model": "kitchen.dish", "pk": 6,
+    "fields": {
+      "name": "Butter Chicken",
+      "description": "Creamy Indian curry",
+      "price": "11.00",
+      "dish_type": 5,
+      "cooks": [6],
+      "ingredients": [4, 7, 9]
+    }
+  },
+  {
+    "model": "kitchen.dish", "pk": 7,
+    "fields": {
+      "name": "Garlic Bread",
+      "description": "Toasted bread with garlic butter",
+      "price": "3.50",
+      "dish_type": 3,
+      "cooks": [2],
+      "ingredients": [3, 7]
+    }
+  },
+  {
+    "model": "kitchen.dish", "pk": 8,
+    "fields": {
+      "name": "Cheesecake",
+      "description": "Sweet dessert with cream cheese",
+      "price": "6.75",
+      "dish_type": 6,
+      "cooks": [5, 6],
+      "ingredients": [2, 4, 5]
+    }
+  },
+  {
+    "model": "kitchen.dish", "pk": 9,
+    "fields": {
+      "name": "Focaccia",
+      "description": "Italian bread with herbs",
+      "price": "4.20",
+      "dish_type": 3,
+      "cooks": [4, 7],
+      "ingredients": [3, 7]
+    }
+  },
+  {
+    "model": "kitchen.dish", "pk": 10,
+    "fields": {
+      "name": "Chocolate Cake",
+      "description": "Rich chocolate layered cake",
+      "price": "7.90",
+      "dish_type": 4,
+      "cooks": [1, 3],
+      "ingredients": [2, 4, 5]
+    }
+  },
+  {
+    "model": "kitchen.dish", "pk": 11,
+    "fields": {
+      "name": "Boerewors Braai",
+      "description": "South African grilled sausage",
+      "price": "12.50",
+      "dish_type": 2,
+      "cooks": [2, 6],
+      "ingredients": [9, 7]
+    }
+  },
+  {
+    "model": "kitchen.dish", "pk": 12,
+    "fields": {
+      "name": "Tiramisu",
+      "description": "Coffee-flavored Italian dessert",
+      "price": "8.00",
+      "dish_type": 6,
+      "cooks": [4, 5],
+      "ingredients": [4, 5, 2]
+    }
+  },
+  {
+    "model": "kitchen.dish", "pk": 13,
+    "fields": {
+      "name": "Biscuit Sandwich",
+      "description": "Buttery biscuit with egg and cheese",
+      "price": "5.00",
+      "dish_type": 1,
+      "cooks": [1, 3],
+      "ingredients": [3, 5, 2]
+    }
+  },
+  {
+    "model": "kitchen.dish", "pk": 14,
+    "fields": {
+      "name": "Pasta Alfredo",
+      "description": "Creamy white pasta",
+      "price": "9.40",
+      "dish_type": 7,
+      "cooks": [4, 7],
+      "ingredients": [3, 4, 2]
+    }
+  }
+]
