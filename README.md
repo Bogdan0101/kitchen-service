@@ -4,8 +4,16 @@ Project for kitchen service with dish, dish type, ingredients and cooks.
 Create kitchen-service with use Python and Django web framework.<br>
 I made the styles myself using some Bootstrap4 elements.<br>
 Also I use built-in Django authentication with crispy forms.<br>
-# DB structure:<br>
+# DB structure<br>
 <img width="551" height="411" alt="kitchen" src="https://github.com/user-attachments/assets/d54d5641-1fb3-4549-9c22-b73c3fa38352" /> <br>
+
+# Installation instructions
+1. git clone https://github.com/Bogdan0101/kitchen-service.git
+2. cd kitchen-service <br>
+3. python -m venv venv <br>
+4. venv/Scripts/activate <br>
+5. pip install -r requirements.txt <br>
+6. python manage.py runserver <br>
 
 # Screenshots  
 Login page:<br>
