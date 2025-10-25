@@ -9,6 +9,9 @@ Also I use built-in Django authentication with crispy forms.<br>
 
 # Deploy project
 https://kitchen-service-48p9.onrender.com
+# User admin
+Login: admin.cook  
+Password: 1qazcde3
 # Installation instructions
 1. git clone https://github.com/Bogdan0101/kitchen-service.git
 2. cd kitchen-service <br>
