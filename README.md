@@ -7,6 +7,8 @@ Also I use built-in Django authentication with crispy forms.<br>
 # DB structure<br>
 <img width="551" height="411" alt="kitchen" src="https://github.com/user-attachments/assets/d54d5641-1fb3-4549-9c22-b73c3fa38352" /> <br>
 
+# Deploy project
+https://kitchen-service-48p9.onrender.com
 # Installation instructions
 1. git clone https://github.com/Bogdan0101/kitchen-service.git
 2. cd kitchen-service <br>
