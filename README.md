@@ -13,7 +13,8 @@ Also I use built-in Django authentication with crispy forms.<br>
 3. python -m venv venv <br>
 4. venv/Scripts/activate <br>
 5. pip install -r requirements.txt <br>
-6. python manage.py runserver <br>
+6. python manage.py collectstatic
+7. python manage.py runserver <br>
 
 # Screenshots  
 Login page:<br>
