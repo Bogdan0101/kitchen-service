@@ -1,9 +1,11 @@
 ﻿# Project description  
 Project for kitchen service with dish, dish type, ingredients and cooks.
 # Technologies used
-Create kitchen-service with use Python and Django web framework.<br>
-I made the styles myself using some Bootstrap4 elements.<br>
-Also I use built-in Django authentication with crispy forms.<br>
+It's kitchen-service with use Python and Django web framework.<br>
+I created the styles myself, using some Bootstrap4 elements,  
+and used some Javascript to create the burger menu.<br>
+Also I used built-in Django authentication with crispy forms.<br>
+There is also an adaptation for mobile devices.
 # DB structure<br>
 <img width="551" height="411" alt="kitchen" src="https://github.com/user-attachments/assets/d54d5641-1fb3-4549-9c22-b73c3fa38352" /> <br>
 
@@ -54,4 +56,9 @@ Ingredients list page:<br>
 Ingredients detail page:<br>
 ![IngredientsDetail](https://github.com/user-attachments/assets/a0d1d18d-efef-4496-ad61-941524227a68)<br>
 Admin panel:<br>
-![admin](https://github.com/user-attachments/assets/28548393-7e83-4632-8038-5bfb66abdf0d)
+![admin](https://github.com/user-attachments/assets/28548393-7e83-4632-8038-5bfb66abdf0d)  
+
+There is also an adaptation for mobile devices:  
+![mobile_device](https://github.com/user-attachments/assets/99c79c71-29a1-4747-8fb0-78f65037311d)  
+![mobile_device2](https://github.com/user-attachments/assets/3bf99f76-0ce9-4b36-9fbf-cafd4ae9443b)  
+![mobile_device3](https://github.com/user-attachments/assets/6b7448de-8fa8-494f-8acf-eeaf752698f6)  

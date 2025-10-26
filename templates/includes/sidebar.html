@@ -7,11 +7,13 @@
       <li><a href="{% url 'login' %}">Login</a></li>
     {% endif %}
   </ul>
-  <ul>
-    <li><a href="{% url 'kitchen:index' %}">Home</a></li>
-    <li><a href="{% url 'kitchen:cook-list' %}">All cooks</a></li>
-    <li><a href="{% url 'kitchen:dish-list' %}">All dishes</a></li>
-    <li><a href="{% url 'kitchen:dish-type-list' %}">All dish types</a></li>
-    <li><a href="{% url 'kitchen:ingredient-list' %}">All ingredients</a></li>
-  </ul>
+  <nav class="menu">
+    <ul class="menu-close">
+      <li><a href="{% url 'kitchen:index' %}">Home</a></li>
+      <li><a href="{% url 'kitchen:cook-list' %}">All cooks</a></li>
+      <li><a href="{% url 'kitchen:dish-list' %}">All dishes</a></li>
+      <li><a href="{% url 'kitchen:dish-type-list' %}">All dish types</a></li>
+      <li><a href="{% url 'kitchen:ingredient-list' %}">All ingredients</a></li>
+    </ul>
+  </nav>
 </header>
