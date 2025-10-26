@@ -63,23 +63,23 @@ body {
     padding: 10px 50px;
 }
 
-.header > ul {
+.header ul {
     display: flex;
     padding: 0;
     margin: 0;
 }
 
-.header > ul > li {
+.header li {
     display: flex;
     background-color: #c8bcae;
     border: 1px solid black;
 }
 
-.header > ul > li:hover {
+.header li:hover {
     background-color: white;
 }
 
-.header > ul > li > a {
+.header a {
     padding: 15px;
     text-decoration: none;
     color: black;
@@ -152,45 +152,55 @@ body {
     min-height: 414px;
     border-radius: 20px;
 }
-.box-detail{
+
+.box-detail {
     margin: 5px 15px;
     padding: 10px 10px 0 10px;
     background: rgb(75 71 66 / 85%);
     border: 1px solid black;
     border-radius: 20px;
 }
-.table{
+
+.table {
     margin: 10px 0 0 0;
 }
-.pagination-box{
+
+.pagination-box {
     display: flex;
     justify-content: center;
 }
-.form-group{
+
+.form-group {
     margin: 0;
 }
-.box-detail-info{
+
+.box-detail-info {
     background-color: #c8bcae;
     padding: 5px 30px;
     border-radius: 20px;
     margin-bottom: 5px;
 }
-.box-detail-info>p{
+
+.box-detail-info > p {
     margin: 0 0 7px 0;
 }
-.box-detail-info>ul{
+
+.box-detail-info > ul {
     margin: 0 0 4px 0;
 }
-.box-form{
+
+.box-form {
     background-color: #c8bcae;
     padding: 5px 30px;
     border-radius: 20px;
     margin: 0 15px 5px 15px;
 }
-.box-form>form>div{
+
+.box-form > form > div {
     margin: 10px 0;
 }
-.box-delete{
+
+.box-delete {
     background-color: #c8bcae;
     padding: 5px 30px;
     border-radius: 20px;
@@ -198,4 +208,50 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+@media screen and (max-width: 850px) {
+    .body-index-content {
+        flex-direction: column;
+    }
+
+    .body-index-content > div {
+        margin-bottom: 10px;
+    }
+    .menu{
+        position: relative;
+        display: block;
+        width: 50px;
+        height: 55px;
+        cursor: pointer;
+    }
+    .menu::before {
+        content: '\2630';
+        position: absolute;
+        display: block;
+        font-size: 34px;
+        top: 0;
+        left: 10px;
+    }
+    .menu > .menu-close {
+        position: absolute;
+        left: -83px;
+        top: 54px;
+        width: 135px;
+        display: none;
+    }
+    .menu > ul > li > a {
+        width: 100%;
+    }
+    .menu > .menu-open {
+        display: block;
+    }
+}
+@media screen and (max-width: 620px){
+    body > div.box-list > table > tbody > tr > th:nth-child(5){
+        display: none;
+    }
+    body > div.box-list > table > tbody > tr > td:nth-child(5){
+        display: none;
+    }
 }
