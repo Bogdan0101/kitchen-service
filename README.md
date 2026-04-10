@@ -1,4 +1,4 @@
-﻿[![Kitchen Service CI](https://github.com/Bogdan0101/kitchen-service/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/Bogdan0101/kitchen-service/actions/workflows/tests.yml)  
+﻿[![Kitchen Service CI](https://github.com/Bogdan0101/kitchen-service/actions/workflows/tests.yml/badge.svg)](https://github.com/Bogdan0101/kitchen-service/actions/workflows/tests.yml)  
 [![codecov](https://codecov.io/github/Bogdan0101/kitchen-service/graph/badge.svg?token=GSIY3H8VTV)](https://codecov.io/github/Bogdan0101/kitchen-service)  
 
 # Project description  
