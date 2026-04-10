@@ -1,4 +1,7 @@
-﻿# Project description  
+﻿
+[![codecov](https://codecov.io/github/Bogdan0101/kitchen-service/graph/badge.svg?token=GSIY3H8VTV)](https://codecov.io/github/Bogdan0101/kitchen-service)  
+
+# Project description  
 Project for kitchen service with dish, dish type, ingredients and cooks.
 # Technologies used
 It's kitchen-service with use Python and Django web framework.<br>
